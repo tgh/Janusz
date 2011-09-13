@@ -1,0 +1,51 @@
+compile with -lglut flag using g++
+
+----------
+ THE NAME
+----------
+Named after cinematographer, Janusz Kaminski (Schindler's List, Saving Private
+Ryan, A.I., Minority Report, etc)
+
+
+----------
+ CONTROLS
+----------
+left-click and drag    : change pitch and yaw of camera /
+                         change x and z position of person or light
+right-click and drag   : spin person along the person's vertical axis /
+                       : raise/lower the light
+center-click and drag  : change person's pitch and yaw
+'+' (actually '=')     : camera zoom in /
+                         increase selected color (only when in control of light)
+'-'                    : camera zoom out /
+                         decrease selected color (only when in control of light)
+'w'                    : move camera forward
+'s'                    : move camera backward
+'a'                    : strafe camera left
+'d'                    : strafe camera right
+'q'                    : raise camera
+'z'                    : lower camera
+'o'                    : turn on/off the display of person/light
+'c'                    : switch control to camera
+'1'                    : switch control to person 1 (green)
+'2'                    : switch control to person 2 (red)
+'3'                    : switch control to person 3 (blue)
+'4'                    : switch control to person 4 (yellow)
+'6'                    : switch control to light 1
+'7'                    : switch control to light 2
+'8'                    : switch control to light 3
+'r'                    : select color red
+'g'                    : select color green
+'b'                    : select color blue
+'l'                    : turn the grid lines on/off
+
+
+------
+ TODO
+------
+- modularize code
+- make control to turn off the display of the light stand, but leave the light
+- the more the camera is zoomed in, the less left-click-and-drag should rotate
+  the camera (be less sensitive, in other words)
+- make fullscreen mode dynamic
+- add focus control ??
