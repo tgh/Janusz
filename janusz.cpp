@@ -22,13 +22,13 @@
 //----------------------------------------------------------------------------
 
 //display list id's
-GLuint head_list_id;			     //display list id of heads
-GLuint body_list_id;			     //display list id of bodies
-GLuint light_head_id;		     //display list id of the head of a light stand
+GLuint head_list_id;            //display list id of heads
+GLuint body_list_id;            //display list id of bodies
+GLuint light_head_id;           //display list id of the head of a light stand
 GLuint light_base_id;           //display list id of the base of a light stand
 
 //mouse variables
-int diff_x;	                    //difference in x position from last position
+int diff_x;                     //difference in x position from last position
 int diff_y;                     //difference in y position from last position
 int last_x;                     //the last x position of mouse
 int last_y;                     //the last y position of mouse
@@ -275,7 +275,7 @@ void key_handler(unsigned char key, int x, int y)
             red = false;
             green = false;
             blue = false;
-			   }
+         }
          break;
 
       //switch user control to person 1 object
@@ -819,36 +819,36 @@ void draw()
 
    //draw the grid lines
    if (draw_grid) {
-	   glBegin (GL_LINES);
-	   glColor3f(0.5f, 0.5f, 0.5f);
-	   for (int i = -10; i <= 10; ++i) {
-		   //floor
-		   glVertex3f(i, 0, -10);
-		   glVertex3f(i, 0, 10);
-		   glVertex3f(10, 0, i);
-		   glVertex3f(-10, 0, i);
-		   //back wall
-		   glVertex3f(i, 0, 10);
-		   glVertex3f(i, 10, 10);
-		   //left wall
-		   glVertex3f(10, 0, i);
-		   glVertex3f(10, 10, i);
-		   //right wall
-		   glVertex3f(-10, 0, i);
-		   glVertex3f(-10, 10, i);
-	   }
-	   for (int i = 0; i <= 10; ++i) {
-		   //back wall
-		   glVertex3f(10, i, 10);
-		   glVertex3f(-10, i, 10);
-		   //left wall
-		   glVertex3f(10, i, -10);
-		   glVertex3f(10, i, 10);
-		   //right wall
-		   glVertex3f(-10, i, -10);
-		   glVertex3f(-10, i, 10);
-	   }
-	   glEnd(); //GL_LINES for grid
+      glBegin (GL_LINES);
+      glColor3f(0.5f, 0.5f, 0.5f);
+      for (int i = -10; i <= 10; ++i) {
+         //floor
+         glVertex3f(i, 0, -10);
+         glVertex3f(i, 0, 10);
+         glVertex3f(10, 0, i);
+         glVertex3f(-10, 0, i);
+         //back wall
+         glVertex3f(i, 0, 10);
+         glVertex3f(i, 10, 10);
+         //left wall
+         glVertex3f(10, 0, i);
+         glVertex3f(10, 10, i);
+         //right wall
+         glVertex3f(-10, 0, i);
+         glVertex3f(-10, 10, i);
+      }
+      for (int i = 0; i <= 10; ++i) {
+         //back wall
+         glVertex3f(10, i, 10);
+         glVertex3f(-10, i, 10);
+         //left wall
+         glVertex3f(10, i, -10);
+         glVertex3f(10, i, 10);
+         //right wall
+         glVertex3f(-10, i, -10);
+         glVertex3f(-10, i, 10);
+      }
+      glEnd(); //GL_LINES for grid
    }
 
    //DRAW PERSON 1 (GREEN)
